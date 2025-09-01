@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred') {
-                        sh "docker build -t asif9720/microservices/paymentservice:v1.0.0 ."
+                        sh "docker build -t asif9720/e-commerce-paymentservice:v1.0.0 ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred') {
-                        sh "docker push asif9720/microservices/paymentservice:v1.0.0"
+                        sh "docker push asif9720/e-commerce-paymentservice:v1.0.0"
                     }
                 }
             }
